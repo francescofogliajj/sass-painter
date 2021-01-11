@@ -6,6 +6,7 @@
 
 body {
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .container-80 {
@@ -80,20 +81,133 @@ main section {
   height: 500px;
   background-image: url("https://www.painterartist.com/static/ptr/product_content/painteressentials/7/hero-painteressentials-7.jpg");
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-position: center;
 }
 main section .jumbotron {
   display: flex;
+  padding-top: 20px;
 }
 main section .jumbotron .left {
-  width: 30%;
+  width: 25%;
   height: 100%;
+  position: relative;
+}
+main section .jumbotron .left small {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
 }
 main section .jumbotron .center {
   width: 40%;
   height: 100%;
 }
+main section .jumbotron .center h2, main section .jumbotron .center h3 {
+  margin: 25px 0;
+}
+main section .jumbotron .center h2 {
+  font-size: 180%;
+}
+main section .jumbotron .center h3 {
+  font-size: 150%;
+}
+main section .jumbotron .center ul {
+  padding: 0 5px;
+  margin-bottom: 40px;
+}
+main section .jumbotron .center ul li {
+  margin: 20px 0;
+  font-size: 120%;
+}
+main section .jumbotron .center ul li i {
+  font-size: 10px;
+  vertical-align: middle;
+}
+main section .jumbotron .center a {
+  display: flex;
+  width: 210px;
+  text-decoration: none;
+  color: white;
+  background-color: grey;
+  padding: 10px 0;
+}
+main section .jumbotron .center a:hover {
+  background-color: #5a5a5a;
+}
+main section .jumbotron .center a div:first-child {
+  width: 80%;
+  border-right: 1px solid white;
+  padding: 0 10px;
+}
+main section .jumbotron .center a div:first-child p:first-child {
+  text-transform: uppercase;
+}
+main section .jumbotron .center a div:nth-child(2) {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+main section .jumbotron .center a div:nth-child(2) i {
+  font-size: 20px;
+}
 main section .jumbotron .right {
-  width: 30%;
+  width: 35%;
   height: 100%;
+  padding: 20px;
+  background-color: black;
+}
+main section .jumbotron .right .download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main section .jumbotron .right .download h2, main section .jumbotron .right .download small {
+  margin: 10px 0;
+}
+main section .jumbotron .right .download small {
+  text-transform: uppercase;
+}
+main section .jumbotron .right .download img {
+  height: 100px;
+}
+main section .jumbotron .right #buy-now {
+  text-decoration: none;
+}
+main section .jumbotron .right #buy-now span {
+  color: white;
+  background-color: #009CFF;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+main section .jumbotron .right #buy-now span:hover {
+  background-color: #4dbaff;
+}
+main section .jumbotron .right a {
+  text-decoration: none;
+  color: black;
+}
+main section .jumbotron .right a ul {
+  background-color: white;
+  padding: 10px;
+  margin-top: 40px;
+}
+main section .jumbotron .right a ul li {
+  margin: 10px 0;
+  font-size: 17px;
+}
+main section .jumbotron .right a ul li:first-child {
+  text-transform: uppercase;
+}
+main section .jumbotron .right a ul li:last-child {
+  color: #009CFF;
+}
+main section .jumbotron .right a ul li:last-child:hover {
+  text-decoration: underline;
 }

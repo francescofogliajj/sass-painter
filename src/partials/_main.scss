@@ -3,21 +3,131 @@ main {
     width: 100%;
     height: 500px;
     background-image: url($jumbotronImage);
-    background-size: cover;
+    @include backgroundSizeCover;
     background-position: center;
     .jumbotron {
       display: flex;
+      padding-top: 20px;
       .left {
-        width: 30%;
+        width: 25%;
         height: 100%;
+        position: relative;
+        small {
+          position: absolute;
+          left: 50%;
+          bottom: 20px;
+          transform: translateX(-50%);
+        }
       }
       .center {
         width: 40%;
         height: 100%;
+        h2, h3 {
+          margin: 25px 0;
+        }
+        h2 {
+          font-size: 180%;
+        }
+        h3 {
+          font-size: 150%;
+        }
+        ul {
+          padding: 0 5px;
+          margin-bottom: 40px;
+          li {
+            margin: 20px 0;
+            font-size: 120%;
+            i {
+              font-size: $chevronSize;
+              vertical-align: middle;
+            }
+          }
+        }
+        a {
+          display: flex;
+          width: 210px;
+          text-decoration: none;
+          color: $textColor;
+          background-color: grey;
+          padding: 10px 0;
+          &:hover {
+            background-color: darken(grey, 15%);
+          }
+          div:first-child {
+            width: 80%;
+            border-right: 1px solid $textColor;
+            padding: 0 10px;
+            p:first-child {
+              text-transform: uppercase;
+            }
+          }
+          div:nth-child(2) {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            i {
+              font-size: 20px;
+            }
+          }
+        }
       }
       .right {
-        width: 30%;
+        width: 35%;
         height: 100%;
+        padding: 20px;
+        background-color: $mainColor;
+        .download {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          h2, small {
+            margin: 10px 0;
+          }
+          small {
+            text-transform: uppercase;
+          }
+          img {
+            height: 100px;
+          }
+        }
+        #buy-now {
+          text-decoration: none;
+          span {
+            color: $textColor;
+            background-color: $brandColor;
+            padding: 10px 40px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            &:hover {
+              background-color: lighten($brandColor, 15%);
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          color: $mainColor;
+          ul {
+            background-color: $textColor;
+            padding: 10px;
+            margin-top: 40px;
+            li {
+              margin: 10px 0;
+              font-size: 17px;
+            }
+            li:first-child {
+              text-transform: uppercase;
+            }
+            li:last-child {
+              color: $brandColor;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
       }
     }
   }
