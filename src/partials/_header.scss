@@ -1,0 +1,56 @@
+header {
+  height: 100px;
+  width: 100%;
+  background-color: $mainColor;
+  .top {
+    height: 50px;
+    text-align: right;
+    li {
+      display: inline-block;
+      line-height: 50px;
+      i {
+        color: $brandColor;
+        margin: 0 5px;
+      }
+      a {
+        text-decoration: none;
+        color: $textColor;
+        margin: 0 5px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .bottom {
+    height: 50px;
+    li {
+      display: inline-block;
+      line-height: 50px;
+      padding: 0 20px;
+      &:hover {
+        background-color: $textColor;
+      }
+      &:hover a {
+        color: $mainColor;
+      }
+      &:hover i {
+        color: $mainColor;
+      }
+      a {
+        text-decoration: none;
+        color: $textColor;
+        img {
+          width: 80%;
+          vertical-align: sub;
+        }
+      }
+      i {
+        font-size: 10px;
+      }
+    }
+    li:first-child:hover {
+      background-color: $mainColor;
+    }
+  }
+}
